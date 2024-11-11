@@ -1,0 +1,209 @@
+header {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+  backdrop-filter: blur(4px);
+
+  z-index: 9999;
+}
+
+.logo {
+  z-index: 1000;
+}
+
+.logo h3 {
+  font-family: 'Unbounded';
+  cursor: default;
+  user-select: none;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 60px;
+  font-family: 'Montserrat';
+}
+
+.nav-list__item {
+  position: relative;
+  border-radius: 50px;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  cursor: pointer;
+
+  z-index: 1000;
+}
+
+.nav-list__item::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(135deg, rgba(84, 66, 221, 0.1), rgba(200, 146, 246, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+
+  z-index: -1000;
+}
+
+.nav-list__item:hover::after {
+  opacity: 1;
+}
+
+.nav-list__item:active::after {
+  background: none;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-group__button_tg {
+  position: relative;
+  height: 36px;
+  width: 36px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 50%;
+
+  z-index: 1000;
+}
+
+.btn-group__button_tg img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-55%, -50%);
+  user-select: none;
+}
+
+.btn-group__button_tg::before {
+  position: absolute;
+  content: '';
+  inset: 0;
+
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 30%, rgba(255, 255, 255, 0.3) 100%) border-box;
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.btn-group__button_tg::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease-out, box-shadow 0.3s ease-out;
+
+  z-index: -1000;
+}
+
+.btn-group__button_tg:hover::after {
+  opacity: 1;
+  box-shadow: 0 5px 10px 0 rgba(255, 255, 255, 0.05);
+}
+
+.btn-group__button_tg:active::after {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+  box-shadow: none;
+}
+
+.btn-group__button_tg:active::before {
+  border: none;
+}
+
+.btn-group__button_tg:active {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+}
+
+.btn-group__button_start {
+  position: relative;
+  padding: 16px 36px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #6715CA, #363DF5);
+
+  font-family: 'Unbounded';
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+
+  z-index: 1000;
+}
+
+.btn-group__button_start::before {
+  position: absolute;
+  content: '';
+  inset: 0;
+
+  border-radius: 50px;
+  border: 1px solid transparent;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3)) border-box;
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.btn-group__button_start::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #6715CA 70%, #363DF5);
+  opacity: 0;
+  transition: opacity 0.3s ease-out, box-shadow 0.3s ease-out;
+
+  z-index: -1000;
+}
+
+.btn-group__button_start:hover::after {
+  opacity: 1;
+  box-shadow:
+    0 12px 30px 0 rgba(123, 41, 222, 0.251),
+    0 5px 10px 0 rgba(54, 61, 245, 0.102);
+}
+
+.btn-group__button_start:active::after {
+  background: linear-gradient(135deg, rgba(102, 21, 202, 0.5), rgba(54, 60, 245, 0.5));
+  box-shadow: none;
+}
+
+.btn-group__button_start:active::before {
+  border: none;
+}
+
+.btn-group__button_start:active {
+  background: linear-gradient(135deg, rgba(102, 21, 202, 0.5), rgba(54, 60, 245, 0.5));
+}

@@ -1,0 +1,220 @@
+@import 'service-info.css';
+@import 'tariff-info.css';
+
+.price__title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.price__title {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  line-height: 25.56px;
+}
+
+.price__content-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px 32px;
+}
+
+.price__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: min-content;
+  flex-grow: 1;
+  width: calc(100% - 250%);
+}
+
+.price__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.price__list-item {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 16px;
+  line-height: 22.4px;
+}
+
+.price__list-item_point {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding-left: 12px;
+  font-size: 16px;
+  line-height: 22.4px;
+}
+
+.price__list-item_point::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(180deg, #5442DD, #C892F6);
+  border-radius: 50%;
+}
+
+.price__details {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  line-height: 16.8px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.price__details-item {
+  position: relative;
+}
+
+.price__details-item_point {
+  position: relative;
+  padding-left: 9px;
+}
+
+.price__details-item_point::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 3px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+
+.price__text_name {
+  font-family: 'Montserrat';
+  font-size: 16px;
+  line-height: 22.4px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  text-wrap: nowrap;
+}
+
+.price__text_gradient {
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22.4px;
+  background: -webkit-linear-gradient(#5442DD, #C892F6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.price__text_ordinary {
+  font-family: 'Unbounded';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.price__text_value {
+  font-family: 'Unbounded';
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+.price__text_currency {
+  font-family: 'Unbounded';
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+.button_purchase {
+  position: relative;
+  padding: 16px 36px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #6715CA, #363DF5);
+
+  font-family: 'Unbounded';
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+
+  align-self: center;
+
+  z-index: 1000;
+}
+
+.button_purchase::before {
+  position: absolute;
+  content: '';
+  inset: 0;
+
+  border-radius: 50px;
+  border: 1px solid transparent;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3)) border-box;
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.button_purchase::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #6715CA 70%, #363DF5);
+  opacity: 0;
+  transition: opacity 0.3s ease-out, box-shadow 0.3s ease-out;
+
+  z-index: -1000;
+}
+
+.button_purchase:hover::after {
+  opacity: 1;
+  box-shadow:
+    0 12px 30px 0 rgba(123, 41, 222, 0.251),
+    0 5px 10px 0 rgba(54, 61, 245, 0.102);
+}
+
+.button_purchase:active::after {
+  background: linear-gradient(135deg, rgba(102, 21, 202, 0.5), rgba(54, 60, 245, 0.5));
+  box-shadow: none;
+}
+
+.button_purchase:active::before {
+  border: none;
+}
+
+.button_purchase:active {
+  background: linear-gradient(135deg, rgba(102, 21, 202, 0.5), rgba(54, 60, 245, 0.5));
+}
+
+.break {
+  flex-grow: 1;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(200, 146, 246, 1), rgba(200, 146, 246, 0.1));
+  opacity: 0.3;
+}
+
+.icon-container {
+  position: relative;
+  height: 40px;
+  width: 40px;
+}

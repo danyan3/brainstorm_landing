@@ -1,0 +1,90 @@
+.important-block-container {
+  position: relative;
+  z-index: 1000;
+}
+
+.important-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 80px;
+}
+
+.important-block__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 730px;
+}
+
+.important-block__title {
+  font-family: 'Unbounded';
+  font-size: 42px;
+  line-height: 54.6px;
+  font-weight: 500;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.important-block__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 0 20px;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Montserrat';
+  font-size: 16px;
+  line-height: 22.4px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.important-block__list-item {
+  text-align: center;
+}
+
+.important-block__list-item span {
+  position: relative;
+  padding-left: 12px;
+}
+
+.important-block__list-item span::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 0;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #5442DD, #C892F6);
+}
+
+.important-block__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 630px;
+}
+
+.important-block__text {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  line-height: 25.56px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.important-block-container .exclamation {
+  position: absolute;
+  top: 30px;
+  left: 25%;
+}
+
+.important-block-container .exclamation-big {
+  position: absolute;
+  top: 20px;
+  right: 25%;
+}
