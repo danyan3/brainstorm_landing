@@ -405,7 +405,7 @@
 
   .switch__button {
     width: 96px;
-    padding: 10px 22px;
+    padding: 10px 0;
     font-size: 15px;
   }
 
