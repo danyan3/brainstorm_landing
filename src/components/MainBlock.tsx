@@ -6,6 +6,7 @@ import vectorSm from "@assets/images/vector-sm.svg";
 import silver_youtube_button from "@assets/images/silver-youtube-button.png";
 import gold_youtube_button from "@assets/images/gold-youtube-button.png";
 import { animate, inView, motion } from "framer-motion";
+import { LetsStartModal } from "./LetsStartModal";
 
 const MainBlock: React.FC = () => {
   useEffect(() => {
@@ -56,7 +57,10 @@ const MainBlock: React.FC = () => {
           и усилят его присутствие в интернете. С нами ваши идеи выходят за
           рамки возможного!
         </p>
-        <button className="button">ПОЕХАЛИ!</button>
+        <LetsStartModal>
+          <button className="button">ПОЕХАЛИ!</button>
+        </LetsStartModal>
+
         <div className="star-4" />
         <motion.img
           viewport={{ once: true }}

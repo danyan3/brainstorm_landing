@@ -1,0 +1,119 @@
+.lets-start-slider .slider__overlay {
+  background: rgba(18, 4, 34, 0.3);
+  backdrop-filter: blur(2.5px);
+}
+
+.lets-start-slider .slider__content {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #19181f;
+  border-radius: 30px;
+  color: #ffffff;
+  font-family: "Montserrat";
+  height: fit-content;
+  max-height: 90svh;
+  height: fit-content;
+  overflow-y: auto;
+  font-size: 16px;
+}
+
+.lets-start-slider .title {
+  font-family: "Unbounded";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lets-start-slider .title img {
+  width: 90px;
+  height: 90px;
+}
+
+.lets-start-slider .description {
+  line-height: 140%; /* 22.4px */
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c892f630;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.lets-start-slider .modal-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+
+  font-family: "Montserrat";
+
+  line-height: 22.4px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.lets-start-slider .modal-list li {
+  position: relative;
+  padding-left: 12px;
+  line-height: 140%; /* 22.4px */
+}
+
+.lets-start-slider .modal-list li:last-child {
+  display: flex;
+}
+
+.lets-start-slider .modal-list li:last-child img {
+  width: 150px;
+  height: 150px;
+}
+
+.lets-start-slider .modal-list li:last-child div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.lets-start-slider .modal-list li:last-child button {
+  width: fit-content;
+}
+
+.lets-start-slider .modal-list li::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #5442dd, #c892f6);
+}
+
+@media only screen and (max-width: 640px) {
+  .lets-start-slider .modal-list li:last-child img {
+    display: none;
+  }
+
+  .lets-start-slider .title img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 4px;
+  }
+  .lets-start-slider .title {
+    font-size: 20px;
+  }
+  .lets-start-slider .slider__content {
+    font-size: 14px;
+    padding: 20px;
+    min-height: auto;
+  }
+  .lets-start-slider .description {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .lets-start-slider .modal-list li:last-child button {
+    margin: 0 auto;
+  }
+}

@@ -354,9 +354,6 @@
   background: linear-gradient(180deg, #5442dd, #c892f6);
 }
 
-.service-info__description p {
-}
-
 @media only screen and (max-width: 1280px) {
   .solution-block {
     padding: 0 40px;

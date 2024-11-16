@@ -5,6 +5,7 @@ import { CloseIcon } from "@/components/ui/icons/CloseIcon";
 import { MenuIcon } from "@/components/ui/icons/MenuIcon";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
+import { LetsStartModal } from "./LetsStartModal";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -79,7 +80,10 @@ const Header: React.FC = () => {
         <button className="btn-group__button btn-group__button_tg">
           <img src={telegram_logo} alt="Telegram logo" />
         </button>
-        <button className="btn-group__button_start button">НАЧАТЬ</button>
+        <LetsStartModal>
+          <button className="button">НАЧАТЬ</button>
+        </LetsStartModal>
+
         <button onClick={handleMenuToggle} className="btn-group__button-menu">
           {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
         </button>
