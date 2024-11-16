@@ -16,6 +16,7 @@ export const SliderModal = ({ slides }: { slides: IGalleryItem[] }) => (
         effect={"fade"}
         autoplay={{ delay: 3000 }}
         loop
+        allowTouchMove={false}
         className="slider__container"
       >
         {slides.map((slide) => (
