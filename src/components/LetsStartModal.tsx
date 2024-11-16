@@ -9,8 +9,8 @@ export const LetsStartModal = ({ children }: ComponentProps<"div">) => (
     <Dialog.Trigger asChild>{children}</Dialog.Trigger>
     <Dialog.Portal>
       <div className="lets-start-slider">
-        <Dialog.Overlay className="slider__overlay" />
-        <Dialog.Content className="slider__content">
+        <Dialog.Overlay className="lets-start-slider__overlay" />
+        <Dialog.Content className="lets-start-slider__content">
           <Dialog.Title className="title">
             Дальнейшие
             <br /> действия <img src={telegramModal} alt="Telegram icon" />
