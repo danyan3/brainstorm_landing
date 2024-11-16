@@ -14,7 +14,7 @@ const MainBlock: React.FC = () => {
       ".title-group__pretitle",
       ".title-group__title",
       ".main-block__content",
-      ".button",
+      ".main-block__button",
     ].map((item, i) => {
       inView(item, ({ target }) => {
         animate(
@@ -58,7 +58,7 @@ const MainBlock: React.FC = () => {
           рамки возможного!
         </p>
         <LetsStartModal>
-          <button className="button">ПОЕХАЛИ!</button>
+          <button className="button main-block__button">ПОЕХАЛИ!</button>
         </LetsStartModal>
 
         <div className="star-4" />
