@@ -11,7 +11,6 @@ export const LetsStartModal = ({ children }: ComponentProps<"div">) => (
       <div className="lets-start-slider">
         <Dialog.Overlay className="lets-start-slider__overlay" />
         <Dialog.Content className="lets-start-slider__content">
-          {" "}
           <div className="lets-start-slider__spark-1" />
           <div className="lets-start-slider__spark-2" />
           <Dialog.Title className="title">

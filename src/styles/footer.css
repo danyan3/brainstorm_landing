@@ -12,6 +12,7 @@ footer {
   height: 154px;
   background-color: #4148e9;
   filter: blur(250px);
+  transform: translate3d(0, 0, 0);
   z-index: -1;
 }
 
@@ -169,6 +170,7 @@ footer {
   position: absolute;
   bottom: 0;
   display: none;
+  transform: translate3d(0, 0, 0);
 }
 
 @media only screen and (max-width: 1024px) {

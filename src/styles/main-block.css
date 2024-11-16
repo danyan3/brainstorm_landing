@@ -143,6 +143,7 @@
   border-radius: 50%;
 
   filter: blur(1px);
+  transform: translate3d(0, 0, 0);
   backdrop-filter: blur(2px);
   display: none;
 }
@@ -179,7 +180,7 @@
     rgba(0, 0, 0, 0)
   );
   border-radius: 50%;
-
+  transform: translate3d(0, 0, 0);
   filter: blur(1px);
   backdrop-filter: blur(2px);
 }
@@ -198,6 +199,7 @@
     rgba(0, 0, 0, 0)
   );
   border-radius: 50%;
+  transform: translate3d(0, 0, 0);
   filter: blur(1px);
   backdrop-filter: blur(2px);
 }
@@ -216,7 +218,7 @@
     rgba(0, 0, 0, 0)
   );
   border-radius: 50%;
-
+  transform: translate3d(0, 0, 0);
   filter: blur(1px);
   backdrop-filter: blur(2px);
 }
@@ -230,6 +232,7 @@
   background: #4148e9;
   filter: blur(200px);
   z-index: -1;
+  transform: translate3d(0, 0, 0);
 }
 
 .main-block__spark-2 {
@@ -241,6 +244,7 @@
   background: #bc3def;
   filter: blur(225px);
   z-index: -1;
+  transform: translate3d(0, 0, 0);
 }
 
 .main-block__spark-3 {
@@ -252,6 +256,7 @@
   background: #4148e9;
   filter: blur(200px);
   z-index: -1;
+  transform: translate3d(0, 0, 0);
 }
 
 .main-block__spark-4 {

@@ -56,30 +56,39 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
+.service-info__container {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+}
+
 .service-info__price {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 100%;
+  width: 50%;
+}
+
+.service-info__slider {
+  max-width: 330px;
+  width: 50%;
 }
 
 .service-info__footer {
   display: flex;
 }
 
-.service-info__container {
-  display: flex;
-  gap: 20px;
-}
-
-.service-info__slider {
-  max-width: 330px;
-  width: 100%;
-}
-
 @media only screen and (max-width: 1280px) {
   .service-info__container {
     flex-direction: column;
+  }
+
+  .service-info__price {
+    width: 100%;
+  }
+
+  .service-info__slider {
+    width: 100%;
   }
 }
 

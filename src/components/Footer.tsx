@@ -25,27 +25,8 @@ const Footer: React.FC = () => {
             </button>
           </div>
         </div>
-        <div className="img-rocket">
-          <motion.div
-            viewport={{ once: true }}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 2 }}
-          >
-            <motion.img
-              initial={{ y: 0, x: 0 }}
-              viewport={{ once: true }}
-              whileInView={{ y: [0, -20, 0], x: [0, -3, 0, 3, 0] }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              src={rocket}
-              alt="Rocket"
-            />
-          </motion.div>
-        </div>
+
+        <motion.img className="img-rocket" src={rocket} alt="Rocket" />
         <motion.img
           viewport={{ once: true }}
           initial={{ opacity: 0 }}

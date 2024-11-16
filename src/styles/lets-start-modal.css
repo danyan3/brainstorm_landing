@@ -118,6 +118,7 @@
   width: 199px;
   height: 199px;
   background: #bc3def;
+  transform: translate3d(0, 0, 0);
   filter: blur(225px);
   opacity: 0.7;
 }
@@ -129,6 +130,7 @@
   width: 183px;
   height: 163px;
   background: #4148e9;
+  transform: translate3d(0, 0, 0);
   opacity: 0.7;
   filter: blur(225px);
 }

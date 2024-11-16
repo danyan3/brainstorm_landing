@@ -131,7 +131,7 @@ const MainBlock: React.FC = () => {
                 viewport={{ once: true }}
                 whileInView={{ y: [0, -20, 0], x: [0, -3, 0, 3, 0] }}
                 transition={{
-                  duration: 2,
+                  duration: 4,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}

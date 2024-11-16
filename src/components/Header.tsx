@@ -81,7 +81,7 @@ const Header: React.FC = () => {
           <img src={telegram_logo} alt="Telegram logo" />
         </button>
         <LetsStartModal>
-          <button className="button">НАЧАТЬ</button>
+          <button className="button btn-group__button_start">НАЧАТЬ</button>
         </LetsStartModal>
 
         <button onClick={handleMenuToggle} className="btn-group__button-menu">
