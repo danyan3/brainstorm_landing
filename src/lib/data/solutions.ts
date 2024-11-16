@@ -68,16 +68,18 @@ const services: ISolution[] = [
     type: "services",
     title: "Монтаж видео",
     iconPath: video,
-    description: "asdasdasd",
+    description:
+      "Улучшите впечатление от вашего ролика с профессиональным монтажом! Наша услуга по созданию монтажа для видео поможет повысить качество и динамику вашего контента, привлекая больше зрителей и удерживая их внимание. Смонтируем любое видео для вас – редактура, монтаж, звук, инфографика, моушн-дизайн, 2D/3D графика.",
     price: [
       {
-        name: "Standart",
-        amount: 600,
+        name: "Горизонтальные видео",
+        amount: 3000,
+        isFrom: true,
       },
       {
-        name: "Premium",
-        amount: 1500,
-        isPrimary: true,
+        name: "Shorts/TikTok/Reels",
+        amount: 1000,
+        isFrom: true,
         isDepends: true,
       },
     ],
@@ -104,11 +106,12 @@ const services: ISolution[] = [
     type: "services",
     title: "Написание сценариев",
     iconPath: script,
-    description: "asdasdasd",
+    description:
+      "Захватите внимание аудитории с первых секунд! Наша услуга по созданию сценариев для видео помогает увеличить вовлеченность и эффективность вашего контента. Мы разрабатываем уникальные, продающие и креативные сценарии, которые точно передают ваше сообщение и удерживают зрителя до последней минуты. Ваше видео заслуживает наилучшего сценария!",
     price: [
       {
-        name: "Standart",
-        amount: 600,
+        name: "",
+        amount: 2000,
         isFrom: true,
         isDepends: true,
       },
@@ -118,16 +121,12 @@ const services: ISolution[] = [
     type: "services",
     title: "Создание субтитров",
     iconPath: subtitles,
-    description: "asdasdasd",
+    description:
+      "Улучшите свои короткие видео, добавив в них субтитры. Это поможет сделать содержание видео более доступным и понятным, улучшая взаимодействие с аудиторией и увеличивая его привлекательность. Идеально подходит для тех, кто стремится максимально расширить охват и увеличить вовлеченность зрителей.",
     price: [
       {
-        name: "Standart",
-        amount: 600,
-      },
-      {
-        name: "Premium",
-        amount: 1500,
-        isPrimary: true,
+        name: "1 Shorts/TikTok/Reels",
+        amount: 250,
       },
     ],
     gallery: [
@@ -153,16 +152,14 @@ const services: ISolution[] = [
     type: "services",
     title: "Транскрибация ",
     iconPath: transcription,
-    description: "asdasdasd",
+    description:
+      "Если вы работаете с видео или аудио, то наверняка находитесь в поисках удобных сервисов для расшифровки речи в текст. Например, для субтитров или написания статей. Мы поможем с легкостью преобразовать ваш видео/аудио файл в текст. Вы сможете скачать результат в формате docx, txt и xlsx.",
     price: [
       {
-        name: "Standart",
-        amount: 600,
-      },
-      {
-        name: "Premium",
-        amount: 1500,
-        isPrimary: true,
+        name: "",
+        amount: 250,
+        isDepends: true,
+        isFrom: true,
       },
     ],
   },
@@ -170,16 +167,14 @@ const services: ISolution[] = [
     type: "services",
     title: "Перевод ",
     iconPath: translation,
-    description: "asdasdasd",
+    description:
+      "Мы предлагаем профессиональный перевод вашего видео, аудио или статьи на английский язык. Эксперты с глубоким пониманием языка обеспечиват точность перевода и сохранение первоначального смысла материала. Расширьте свою аудиторию и увеличьте доступность вашего контента для англоязычных зрителей и читателей.",
     price: [
       {
-        name: "Standart",
-        amount: 600,
-      },
-      {
-        name: "Premium",
-        amount: 1500,
-        isPrimary: true,
+        name: "",
+        amount: 500,
+        isDepends: true,
+        isFrom: true,
       },
     ],
   },
@@ -187,16 +182,14 @@ const services: ISolution[] = [
     type: "services",
     title: "Озвучка",
     iconPath: voice,
-    description: "asdasdasd",
+    description:
+      "Предлагаем профессиональную студийную озвучку вашего видео или статьи на любом языке мира, используя передовые технологии нейросетей. Мы поможем вам найти идеальный голос и тон, который будет соответствовать вашему сообщению и целевой аудитории. Улучшите взаимодействие с зрителями и расширьте свои возможности на международном уровне!",
     price: [
       {
-        name: "Standart",
-        amount: 600,
-      },
-      {
-        name: "Premium",
-        amount: 1500,
-        isPrimary: true,
+        name: "",
+        amount: 1000,
+        isDepends: true,
+        isFrom: true,
       },
     ],
     gallery: [
@@ -222,16 +215,14 @@ const services: ISolution[] = [
     type: "services",
     title: "Нарезка видео",
     iconPath: cutting,
-    description: "asdasdasd",
+    description:
+      "Наверняка вы знаете, насколько сложным занятием бывает нарезка длинного видео на интересные и вовлекающие Shorts/TikTok/Reels. Наш сервис готов помочь вам, выбрав наиболее подходящие моменты и нарезав видео любой длины на короткие ролики. Также, на каждый Shorts добавим субтитры.",
     price: [
       {
-        name: "Standart",
-        amount: 600,
-      },
-      {
-        name: "Premium",
-        amount: 1500,
-        isPrimary: true,
+        name: "",
+        amount: 2000,
+        isDepends: true,
+        isFrom: true,
       },
     ],
   },

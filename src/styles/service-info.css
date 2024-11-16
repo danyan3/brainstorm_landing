@@ -57,21 +57,20 @@
 }
 
 .service-info__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 1fr;
   gap: 20px;
-  overflow: hidden;
 }
 
 .service-info__price {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 50%;
 }
 
-.service-info__slider {
+.service-info__slider-container {
   max-width: 330px;
-  width: 50%;
+  width: 100%;
 }
 
 .service-info__footer {
@@ -80,7 +79,7 @@
 
 @media only screen and (max-width: 1280px) {
   .service-info__container {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .service-info__price {
@@ -88,12 +87,10 @@
   }
 
   .service-info__slider {
+    overflow: hidden;
     width: 100%;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  .service-info__slider {
-    max-width: 100%;
-  }
 }

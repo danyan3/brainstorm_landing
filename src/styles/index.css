@@ -40,6 +40,10 @@ main {
   padding-top: 130px;
   margin-bottom: 143px;
 }
+body[data-scroll-locked][data-scroll-locked] {
+  overflow: auto !important;
+  pointer-events: all !important;
+}
 
 *::-webkit-scrollbar {
   height: 6px;

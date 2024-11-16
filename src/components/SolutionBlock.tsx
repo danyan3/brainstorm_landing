@@ -116,7 +116,7 @@ const SolutionBlock: React.FC = () => {
                             <h4 className="price__title">Наши работы</h4>
                             <div className="break" />
                           </div>
-                          <div>
+                          <div className="service-info__slider-container">
                             <SliderModal slides={activeSolution.gallery} />
                           </div>
                         </div>
@@ -148,19 +148,19 @@ const SolutionBlock: React.FC = () => {
                                               : "price__text_name"
                                           }`}
                                         >
-                                          {item.name}
+                                          {item.name}{" "}
                                         </span>
                                       )}
                                       {item.isFrom && (
                                         <span className="price__text_ordinary">
-                                          от
+                                          от{" "}
                                         </span>
                                       )}
                                       <span className="price__text_value">
-                                        {formatPrice(item.amount)}
+                                        {formatPrice(item.amount)}{" "}
                                       </span>
                                       <span className="price__text_currency">
-                                        ₽*
+                                        ₽{item.isDepends && "*"}
                                       </span>
                                     </div>
                                     {item.isDepends && (

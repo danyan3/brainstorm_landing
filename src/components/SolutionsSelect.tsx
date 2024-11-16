@@ -21,10 +21,6 @@ export const SolutionsSelect = ({
     }}
   >
     <Select.Trigger asChild aria-label="Food">
-      {/* <Select.Value />
-      <Select.Icon className="solution-select__select-scon">
-        <CloseIcon />
-      </Select.Icon> */}
       <button className="solution-select__trigger">
         <img
           className="solution-select__solution-icon"
