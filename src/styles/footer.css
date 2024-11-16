@@ -1,0 +1,231 @@
+footer {
+  position: relative;
+  overflow-x: clip;
+}
+
+.footer-spark {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 866px;
+  height: 154px;
+  background-color: #4148e9;
+  filter: blur(250px);
+  z-index: -1;
+}
+
+.footer-container {
+  position: relative;
+  padding: 107px 80px 50px 80px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__rights {
+  font-family: "Montserrat";
+  font-size: 16px;
+  line-height: 22.4px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact_email {
+  font-family: "Montserrat";
+  font-size: 16px;
+  line-height: 22.4px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact__button_tg {
+  position: relative;
+  height: 36px;
+  width: 36px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 50%;
+
+  z-index: 1000;
+}
+
+.contact__button_tg img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-55%, -50%);
+  user-select: none;
+}
+
+.contact__button_tg::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 30%,
+      rgba(255, 255, 255, 0.3) 100%
+    )
+    border-box;
+
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.contact__button_tg::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease-out, box-shadow 0.3s ease-out;
+
+  z-index: -1000;
+}
+
+.contact__button_tg:hover::after {
+  opacity: 1;
+  box-shadow: 0 5px 10px 0 rgba(255, 255, 255, 0.05);
+}
+
+.contact__button_tg:active::after {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.1)
+  );
+  box-shadow: none;
+}
+
+.contact__button_tg:active::before {
+  border: none;
+}
+
+.contact__button_tg:active {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.1)
+  );
+}
+
+.footer-container .img-rocket {
+  position: absolute;
+  object-fit: cover;
+  object-position: top;
+  width: 378px;
+  height: 259px;
+  left: 292px;
+  bottom: 0px;
+  overflow: hidden;
+}
+
+.footer-container .img-rocket img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-container .img-vector {
+  position: absolute;
+  top: -375px;
+  left: 320px;
+  z-index: -1;
+}
+
+.footer-spark-sm {
+  background-color: #bc3def;
+  opacity: 0.67;
+  filter: blur(150px);
+  width: 194px;
+  height: 194px;
+  right: -120px;
+  position: absolute;
+  bottom: 0;
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .footer-container .img-rocket {
+    width: 267px;
+    height: 267px;
+    right: -156px;
+    left: auto;
+  }
+
+  .footer-spark {
+    width: 226px;
+    height: 80px;
+  }
+
+  .footer-spark-sm {
+    display: block;
+  }
+
+  .footer-container .img-vector {
+    right: 0;
+    left: auto;
+    top: auto;
+    bottom: 250px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .footer-container {
+    padding: 0;
+    text-align: center;
+    padding-top: 115px;
+    padding-bottom: 58px;
+  }
+
+  .footer__contacts {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  .exclamation {
+    display: none;
+  }
+
+  .contact_email {
+    font-size: 15px;
+    line-height: 140%; /* 21px */
+  }
+
+  .footer__rights {
+    font-family: "Montserrat";
+    font-size: 15px;
+    line-height: 140%; /* 21px */
+  }
+}

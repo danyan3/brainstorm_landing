@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  border-style: none;
+  cursor: pointer;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: #16141a;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 130px;
+  padding-top: 130px;
+  margin-bottom: 143px;
+}
+
+*::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+  background: rgba(255, 255, 255, 0);
+  -webkit-overflow-scrolling: touch;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #6715ca, #363df5);
+  border-radius: 50px;
+  height: 20px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.button {
+  position: relative;
+
+  padding: 16px 36px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #6715ca, #363df5);
+
+  font-family: "Unbounded";
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  z-index: 1;
+}
+
+.button::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  z-index: -1;
+
+  border-radius: 50px;
+  border: 1px solid transparent;
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.3)
+    )
+    border-box;
+
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.button::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #6715ca 70%, #363df5);
+  opacity: 0;
+  transition: opacity 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.button:hover::after {
+  opacity: 1;
+  box-shadow: 0 12px 30px 0 rgba(123, 41, 222, 0.251),
+    0 5px 10px 0 rgba(54, 61, 245, 0.102);
+}
+
+.button:active::after {
+  background: linear-gradient(
+    135deg,
+    rgba(102, 21, 202, 0.5),
+    rgba(54, 60, 245, 0.5)
+  );
+  box-shadow: none;
+}
+
+.button:active::before {
+  border: none;
+}
+
+.button:active {
+  background: linear-gradient(
+    135deg,
+    rgba(102, 21, 202, 0.5),
+    rgba(54, 60, 245, 0.5)
+  );
+}
+
+@media only screen and (max-width: 1024px) {
+  main {
+    padding-top: 100px;
+    gap: 20px;
+  }
+}

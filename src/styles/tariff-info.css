@@ -1,0 +1,201 @@
+.tariff-info {
+  display: flex;
+  align-self: baseline;
+  flex-direction: column;
+  width: 50%;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, rgba(32, 29, 38, 1), rgba(32, 29, 38, 0));
+
+  color: #FFFFFF;
+}
+
+.tariff-info__header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tariff-info__title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tariff-info__title {
+  font-family: 'Unbounded';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24.8px;
+  text-align: right;
+}
+
+.tariff-info__description {
+  font-family: 'Montserrat';
+  font-size: 16px;
+  line-height: 22.4px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: right;
+}
+
+.tariff-info__header_icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tariff-info__main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tariff-info__offer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.offer__title-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.offer__title {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  line-height: 25.56px;
+}
+
+.offer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.offer__list-item {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding-left: 12px;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  line-height: 22.4px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.offer__list-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(180deg, #5442DD, #C892F6);
+  border-radius: 50%;
+}
+
+.tariff-info__advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.advantages__title-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.advantages__title {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  line-height: 25.56px;
+}
+
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.advantages__list-item {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding-left: 12px;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  line-height: 22.4px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.advantages__list-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(180deg, #5442DD, #C892F6);
+  border-radius: 50%;
+}
+
+.tariff-info__deadlines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.deadlines__title-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.deadlines__title {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  line-height: 25.56px;
+}
+
+.deadlines__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.deadlines__list-item {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding-left: 12px;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  line-height: 22.4px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.deadlines__list-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(180deg, #5442DD, #C892F6);
+  border-radius: 50%;
+}
+
+.tariff-info__price {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

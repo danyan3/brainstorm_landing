@@ -1,0 +1,133 @@
+.slider__trigger {
+  border-radius: 20px;
+  margin-top: 8px;
+  width: 100%;
+  background: #d9d9d9;
+  height: 180px;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+.slider__trigger .swiper-fade .swiper-slide {
+  border-radius: 0;
+}
+
+.slider__trigger .slider__container .swiper-slide img {
+  object-fit: cover;
+}
+
+.slider__trigger .slider__container .swiper-slide video {
+  object-fit: cover;
+}
+
+.slider__overlay {
+  background: linear-gradient(0deg, #16141a 0%, #16141a 100%), #d9d9d9;
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  z-index: 10000;
+}
+
+.slider__content {
+  border-radius: 6px;
+  box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
+    hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  max-height: 60svh;
+  height: 100%;
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 10000;
+}
+.slider__content:focus {
+  outline: none;
+}
+
+.slider__container {
+  width: 100%;
+  height: 100%;
+}
+
+.slider__container .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slider__container .swiper-slide {
+  border-radius: 32px;
+  background-color: #787678;
+  max-height: 37svh;
+  margin: auto 0;
+  transition: 0.5s;
+  transition-property: background-color, max-height;
+}
+
+.slider__container .swiper-slide-active {
+  background-color: #d9d9d9;
+  max-height: 60svh;
+}
+
+.slider__container .swiper-slide video,
+.slider__container .swiper-slide img {
+  pointer-events: none;
+}
+
+.slider__container .swiper-slide-active video,
+.slider__container .swiper-slide-active img {
+  pointer-events: auto;
+}
+
+.slider__container .swiper-slide video {
+  width: 100%;
+  height: 100%;
+}
+
+.slider__container .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .slider__container .swiper-slide {
+    max-height: 160px;
+  }
+  .slider__container .swiper-slide-active {
+    max-height: 240px;
+  }
+
+  .slider__content {
+    max-height: 240px;
+  }
+}
