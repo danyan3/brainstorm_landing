@@ -36,21 +36,6 @@ const WhomBlock: React.FC = () => {
   const [step, setStep] = useState(0);
 
   useEffect(() => {
-    inView(".brilliant-youtube-button", ({ target }) => {
-      animate(
-        target,
-        {
-          opacity: [0, 1],
-          y: [-50, 0],
-          x: [-50, 0],
-          scale: [0.8, 1],
-        },
-        {
-          duration: 2,
-        }
-      );
-    });
-
     inView(".graph-container", ({ target }) => {
       animate(
         target,
@@ -124,14 +109,24 @@ const WhomBlock: React.FC = () => {
                 </div>
               </div>
             </section>
-            <motion.div className="brilliant-youtube-button">
+
+            <motion.div
+              initial={{ y: 0, x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              whileInView={{ y: [0, 20, 0], x: [0, 3, 0, -3, 0], opacity: 1 }}
+              transition={{
+                duration: 7,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="brilliant-youtube-button"
+            >
               <motion.img
-                initial={{ y: 0, x: 0 }}
+                initial={{ y: -50, x: -50, opacity: 0, scale: 0.8 }}
                 viewport={{ once: true }}
-                whileInView={{ y: [0, 20, 0], x: [0, 3, 0, -3, 0] }}
+                whileInView={{ y: 0, x: 0, opacity: 1, scale: 1 }}
                 transition={{
-                  duration: 7,
-                  repeat: Infinity,
+                  duration: 2,
                   ease: "easeInOut",
                 }}
                 src={brilliant_youtube_button}

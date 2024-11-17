@@ -455,10 +455,6 @@
     line-height: 140%; /* 21px */
   }
 
-  .service-info__main {
-    gap: 8px;
-  }
-
   .price__title {
     font-size: 18px;
   }
