@@ -65,12 +65,12 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 100%;
+  flex: 1 1 0;
 }
 
 .service-info__slider-container {
   max-width: 330px;
-  width: 100%;
+  flex: 1 1 0;
 }
 
 .service-info__footer {
