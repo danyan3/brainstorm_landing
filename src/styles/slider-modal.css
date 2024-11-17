@@ -164,7 +164,7 @@
     transform: scale(1);
   }
 
-  .slider__container .swiper-slide div {
+  .slider__content .swiper-slide div {
     aspect-ratio: 16/ 12;
   }
 }
