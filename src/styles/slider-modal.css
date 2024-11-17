@@ -77,6 +77,14 @@
   overflow: hidden;
 }
 
+.slider__trigger .swiper-slide div {
+  border-radius: 0;
+}
+
+.slider__trigger .swiper-slide div button {
+  pointer-events: none;
+}
+
 .slider__container .swiper-slide-active div {
   background-color: #d9d9d9;
   max-height: 60svh;

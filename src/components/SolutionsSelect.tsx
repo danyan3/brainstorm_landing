@@ -32,7 +32,11 @@ export const SolutionsSelect = ({
       </button>
     </Select.Trigger>
     <Select.Portal>
-      <Select.Content position="popper" className="solution-select__content">
+      <Select.Content
+        position="popper"
+        avoidCollisions={false}
+        className="solution-select__content"
+      >
         <Select.ScrollUpButton className="solution-select__scroll-button">
           <CloseIcon />
         </Select.ScrollUpButton>

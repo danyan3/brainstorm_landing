@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "@styles/main-block.css";
-import rocket from "@assets/images/rocket.png";
+import rocket from "@assets/images/rocket 2.png";
 import vector from "@assets/images/vector.svg";
 import vectorSm from "@assets/images/vector-sm.svg";
 import silver_youtube_button from "@assets/images/silver-youtube-button.png";
@@ -14,7 +14,6 @@ const MainBlock: React.FC = () => {
       ".title-group__pretitle",
       ".title-group__title",
       ".main-block__content",
-      ".main-block__button",
     ].map((item, i) => {
       inView(item, ({ target }) => {
         animate(
@@ -30,6 +29,19 @@ const MainBlock: React.FC = () => {
         );
       });
     }, []);
+
+    inView(".main-block__button", ({ target }) => {
+      animate(
+        target,
+        {
+          opacity: [0, 1],
+          x: [-100, 0],
+        },
+        {
+          duration: 1.5,
+        }
+      );
+    });
   });
 
   return (

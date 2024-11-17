@@ -60,8 +60,6 @@ footer {
     rgba(255, 255, 255, 0) 100%
   );
   border-radius: 50%;
-
-  z-index: 1000;
 }
 
 .contact__button_tg img {
@@ -108,7 +106,7 @@ footer {
   opacity: 0;
   transition: opacity 0.3s ease-out, box-shadow 0.3s ease-out;
 
-  z-index: -1000;
+  z-index: -1;
 }
 
 .contact__button_tg:hover::after {

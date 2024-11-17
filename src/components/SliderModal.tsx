@@ -109,14 +109,7 @@ export const SliderModal = ({ slides }: { slides: IGalleryItem[] }) => {
           {slides.map((slide) => (
             <SwiperSlide key={slide.src}>
               {slide.type === "image" && <img alt="Image" src={slide.src} />}
-              {slide.type === "video" && (
-                <video
-                  playsInline
-                  preload="metadata"
-                  controls={false}
-                  src={slide.src}
-                />
-              )}
+              {slide.type === "video" && <Video src={slide.src} />}
             </SwiperSlide>
           ))}
         </Swiper>

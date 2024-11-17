@@ -42,10 +42,10 @@ const Header: React.FC = () => {
               href="#whom"
               spy={true}
               smooth={true}
-              offset={-150}
+              offset={window.innerWidth < 640 ? 0 : -150}
               duration={500}
             >
-              Кому подходит?
+              Кому подходит<span className="nav-list__item-lg">?</span>
             </Link>
           </li>
           <li className="nav-list__item">
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
               href="#services"
               spy={true}
               smooth={true}
-              offset={-150}
+              offset={window.innerWidth < 640 ? 0 : -150}
               duration={500}
             >
               Тарифы и услуги
@@ -68,10 +68,10 @@ const Header: React.FC = () => {
               href="#how-to-use"
               spy={true}
               smooth={true}
-              offset={-150}
+              offset={window.innerWidth < 640 ? 50 : -150}
               duration={500}
             >
-              Как пользоваться?
+              Как пользоваться<span className="nav-list__item-lg">?</span>
             </Link>
           </li>
         </ul>

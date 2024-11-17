@@ -35,7 +35,9 @@ const OfferBlock: React.FC = () => {
       <section className="offer-block">
         <div className="star-1" />
         <div className="star-2" />
-        <h2 className="offer-block__title">Что мы предлагаем?</h2>
+        <h2 className="offer-block__title">
+          Что мы <br className="offer-block__title-sm" /> предлагаем?
+        </h2>
         <div className="offer-block__content">
           {items.map((item, i) => (
             <motion.div
