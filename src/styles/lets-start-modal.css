@@ -19,7 +19,6 @@
   height: fit-content;
   max-height: 90svh;
   height: fit-content;
-  overflow-y: auto;
   font-size: 16px;
 
   position: fixed;
@@ -27,7 +26,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100vw;
-  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  animation: contentShow 650ms cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 10000;
 }
 
@@ -137,6 +136,10 @@
 @media only screen and (max-width: 640px) {
   .lets-start-slider .modal-list li:last-child img {
     display: none;
+  }
+
+  .lets-start-slider__content {
+    max-width: 340px;
   }
 
   .lets-start-slider .title img {

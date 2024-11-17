@@ -11,12 +11,12 @@ export interface ISolution {
   title: string;
   subTitle?: string;
   description: string;
-  price: {
+  price?: {
     name?: string;
-    amount: number;
+    amount: number | number[];
     isPrimary?: boolean;
     isFrom?: boolean;
-    isDepends?: boolean;
+    desc?: string;
   }[];
   gallery?: IGalleryItem[];
 }

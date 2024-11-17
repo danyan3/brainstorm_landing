@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "@styles/usage-block.css";
-import zhopa from "@assets/images/ZHOPA.gif";
+import step1 from "@assets/gifs/step-1.gif";
+import step2 from "@assets/gifs/step-2.gif";
+import step3 from "@assets/gifs/step-3.gif";
+import step4 from "@assets/gifs/step-4.gif";
 import { Element } from "react-scroll";
 import { Parallax } from "react-scroll-parallax";
 import { AnimatePresence, motion } from "framer-motion";
 
 const items = [
   {
-    gif: zhopa,
+    gif: step1,
     text: (
       <p>
         Найдите нашего ботика в поиске и нажмите{" "}
@@ -16,7 +19,7 @@ const items = [
     ),
   },
   {
-    gif: zhopa,
+    gif: step2,
     text: (
       <p>
         Перемещайтесь между разделами, используя
@@ -25,7 +28,7 @@ const items = [
     ),
   },
   {
-    gif: zhopa,
+    gif: step3,
     text: (
       <p>
         <span className="steps__text_gradient">Выберите нужную услугу</span> и
@@ -35,7 +38,7 @@ const items = [
   },
 
   {
-    gif: zhopa,
+    gif: step4,
     text: (
       <p>
         После подтверждения заказа,{" "}

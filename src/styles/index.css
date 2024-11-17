@@ -37,7 +37,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 130px;
-  padding-top: 130px;
   margin-bottom: 143px;
 }
 body[data-scroll-locked][data-scroll-locked] {
@@ -71,6 +70,7 @@ body[data-scroll-locked][data-scroll-locked] {
   font-weight: 600;
   color: #ffffff;
   z-index: 1;
+  text-decoration: none;
 }
 
 .button::before {
@@ -134,9 +134,30 @@ body[data-scroll-locked][data-scroll-locked] {
   );
 }
 
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-height: 6800px;
+  background-size: cover;
+}
+
 @media only screen and (max-width: 1024px) {
   main {
     padding-top: 100px;
     gap: 20px;
+  }
+
+  .parallax-bg {
+    background-position: 20% !important;
+    max-height: 7200px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .parallax-bg {
+    background-position: 30% !important;
+    max-height: 7900px;
   }
 }

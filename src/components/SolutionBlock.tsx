@@ -10,6 +10,7 @@ import { SolutionsSelect } from "./SolutionsSelect";
 import { formatPrice } from "@/utils/helpers";
 import { Element } from "react-scroll";
 import { AnimatePresence, motion } from "framer-motion";
+import { LetsStartModal } from "./LetsStartModal";
 
 const SolutionBlock: React.FC = () => {
   const [currentType, setCurrentType] = useState<SolutionType>("services");
@@ -121,63 +122,84 @@ const SolutionBlock: React.FC = () => {
                           </div>
                         </div>
                       )}
-
-                      <div className="service-info__price">
-                        <div className="price__title-container">
-                          <h4 className="price__title">Цена</h4>
-                          <div className="break" />
-                        </div>
-                        <div className="price__content-container">
-                          <div className="price__content">
-                            <ul className="price__list">
-                              {activeSolution.price.map((item, index, arr) => {
-                                return (
-                                  <li key={index}>
-                                    <div
-                                      className={`${
-                                        arr.length === 1
-                                          ? "price__list-item"
-                                          : "price__list-item_point"
-                                      }`}
-                                    >
-                                      {item.name && (
-                                        <span
+                      {activeSolution.price ? (
+                        <div className="service-info__price">
+                          <div className="price__title-container">
+                            <h4 className="price__title">Цена</h4>
+                            <div className="break" />
+                          </div>
+                          <div className="price__content-container">
+                            <div className="price__content">
+                              <ul className="price__list">
+                                {activeSolution.price.map(
+                                  (item, index, arr) => {
+                                    return (
+                                      <li key={index}>
+                                        <div
                                           className={`${
-                                            item.isPrimary
-                                              ? "price__text_gradient"
-                                              : "price__text_name"
+                                            arr.length === 1
+                                              ? "price__list-item"
+                                              : "price__list-item_point"
                                           }`}
                                         >
-                                          {item.name}{" "}
-                                        </span>
-                                      )}
-                                      {item.isFrom && (
-                                        <span className="price__text_ordinary">
-                                          от{" "}
-                                        </span>
-                                      )}
-                                      <span className="price__text_value">
-                                        {formatPrice(item.amount)}{" "}
-                                      </span>
-                                      <span className="price__text_currency">
-                                        ₽{item.isDepends && "*"}
-                                      </span>
-                                    </div>
-                                    {item.isDepends && (
-                                      <span className="price__text_depends">
-                                        * - цена зависит от объема работы
-                                      </span>
-                                    )}
-                                  </li>
-                                );
-                              })}
-                            </ul>
+                                          {item.name && (
+                                            <span
+                                              className={`${
+                                                item.isPrimary
+                                                  ? "price__text_gradient"
+                                                  : "price__text_name"
+                                              }`}
+                                            >
+                                              {item.name}{" "}
+                                            </span>
+                                          )}
+                                          {item.isFrom && (
+                                            <span className="price__text_ordinary">
+                                              от{" "}
+                                            </span>
+                                          )}
+                                          <span className="price__text_value">
+                                            {Array.isArray(item.amount) ? (
+                                              <span>
+                                                {formatPrice(item.amount[0])} -{" "}
+                                                {formatPrice(item.amount[1])}
+                                              </span>
+                                            ) : (
+                                              formatPrice(item.amount)
+                                            )}{" "}
+                                          </span>
+                                          <span className="price__text_currency">
+                                            ₽
+                                          </span>
+                                        </div>
+                                        {item.desc && (
+                                          <div
+                                            dangerouslySetInnerHTML={{
+                                              __html: item.desc,
+                                            }}
+                                            className="price__text-depends"
+                                          ></div>
+                                        )}
+                                      </li>
+                                    );
+                                  }
+                                )}
+                              </ul>
+                            </div>
+                            <LetsStartModal>
+                              <button className="button_purchase">
+                                ПРИОБРЕСТИ
+                              </button>
+                            </LetsStartModal>
                           </div>
+                        </div>
+                      ) : (
+                        <LetsStartModal>
                           <button className="button_purchase">
                             ПРИОБРЕСТИ
                           </button>
-                        </div>
-                      </div>
+                        </LetsStartModal>
+                      )}
                     </div>
                   </div>
                 </motion.div>

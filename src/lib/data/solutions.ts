@@ -42,7 +42,7 @@ const services: ISolution[] = [
         amount: 1500,
         isPrimary: true,
         isFrom: true,
-        isDepends: true,
+        desc: "Цена зависит от объема работы",
       },
     ],
     gallery: [
@@ -80,7 +80,7 @@ const services: ISolution[] = [
         name: "Shorts/TikTok/Reels",
         amount: 1000,
         isFrom: true,
-        isDepends: true,
+        desc: "Цена зависит от объема работы",
       },
     ],
     gallery: [
@@ -113,7 +113,7 @@ const services: ISolution[] = [
         name: "",
         amount: 2000,
         isFrom: true,
-        isDepends: true,
+        desc: "Цена зависит от количества символов в сценарии",
       },
     ],
   },
@@ -157,9 +157,8 @@ const services: ISolution[] = [
     price: [
       {
         name: "",
-        amount: 250,
-        isDepends: true,
-        isFrom: true,
+        amount: [250, 10000],
+        desc: "Цена зависит от хронометража аудио/видео",
       },
     ],
   },
@@ -173,7 +172,7 @@ const services: ISolution[] = [
       {
         name: "",
         amount: 500,
-        isDepends: true,
+        desc: "Цена зависит от объёма работы",
         isFrom: true,
       },
     ],
@@ -188,7 +187,7 @@ const services: ISolution[] = [
       {
         name: "",
         amount: 1000,
-        isDepends: true,
+        desc: "Цена зависит от объема работы",
         isFrom: true,
       },
     ],
@@ -221,7 +220,7 @@ const services: ISolution[] = [
       {
         name: "",
         amount: 2000,
-        isDepends: true,
+        desc: "Цена зависит от хронометража видео",
         isFrom: true,
       },
     ],
@@ -235,36 +234,6 @@ const buisness: ISolution[] = [
     iconPath: site,
     description:
       "Мы создаем сайты и лендинги, которые не просто существуют, а работают на вас. Разрабатываем уникальные дизайны, которые отражают суть вашего бренда. Работаем над каждой деталью: от аккуратной вёрстки до полной адаптивности, чтобы ваш сайт выглядел отлично на любом устройстве. Если у вас уже есть сайт, но его нужно освежить или усовершенствовать, мы с радостью возьмемся за доработку и внедрение нужных решений.",
-    price: [
-      {
-        name: "Standart",
-        amount: 600,
-      },
-      {
-        name: "Premium",
-        amount: 1500,
-        isPrimary: true,
-        isDepends: true,
-      },
-    ],
-    gallery: [
-      {
-        type: "image",
-        src: "https://images.unsplash.com/photo-1709884735017-114f4a31f944?q=80&w=2129&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        type: "video",
-        src: "https://videocdn.cdnpk.net/euphony/content/video/partners2663/large_watermarked/BB_b6f6d5dd-5e81-48a8-8b7a-1a6d13836f78_preview.mp4",
-      },
-      {
-        type: "image",
-        src: "https://images.unsplash.com/photo-1468324231521-5bb8d15ff471?q=80&w=2673&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        type: "video",
-        src: "https://videocdn.cdnpk.net/videos/d9149d5c-0805-558e-b40b-f0bb548a7f0f/horizontal/previews/videvo_watermarked/large.mp4",
-      },
-    ],
   },
   {
     type: "buisness",
@@ -272,35 +241,6 @@ const buisness: ISolution[] = [
     iconPath: design,
     description:
       "От первых впечатлений до постоянных клиентов всего один шаг — грамотный дизайн! Наша команда профессионалов создаст для вас стильные и функциональные дизайны сайтов, лендингов, визиток, баннеров, логотипов или карточек товаров. Нам под силу сделать даже рекламные объявления и оформить мобильные приложения, которые привлекут и удержат внимание.",
-    price: [
-      {
-        name: "Standart",
-        amount: 600,
-      },
-      {
-        name: "Premium",
-        amount: 1500,
-        isPrimary: true,
-      },
-    ],
-    gallery: [
-      {
-        type: "image",
-        src: "https://images.unsplash.com/photo-1709884735017-114f4a31f944?q=80&w=2129&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        type: "video",
-        src: "https://videocdn.cdnpk.net/euphony/content/video/partners2663/large_watermarked/BB_b6f6d5dd-5e81-48a8-8b7a-1a6d13836f78_preview.mp4",
-      },
-      {
-        type: "image",
-        src: "https://images.unsplash.com/photo-1468324231521-5bb8d15ff471?q=80&w=2673&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        type: "video",
-        src: "https://videocdn.cdnpk.net/videos/d9149d5c-0805-558e-b40b-f0bb548a7f0f/horizontal/previews/videvo_watermarked/large.mp4",
-      },
-    ],
   },
   {
     type: "buisness",
@@ -308,17 +248,6 @@ const buisness: ISolution[] = [
     iconPath: auto,
     description:
       "Почему бы не сделать работу проще и быстрее? Наша команда разрабатывает клиент-серверные приложения и продвинутых ботов, способных выполнять разноплановые задачи. Будь то сложные бизнес-процессы или повседневные операции, мы создаем специализированные программы и сервисы, адаптированные под ваши нужды. Нужна собственная CRM? Без проблем! И, конечно, автоматическое ведение отчётности — чтобы вы тратили меньше времени на бумаги и больше на то, что действительно важно.",
-    price: [
-      {
-        name: "Standart",
-        amount: 600,
-      },
-      {
-        name: "Premium",
-        amount: 1500,
-        isPrimary: true,
-      },
-    ],
   },
   {
     type: "buisness",
@@ -326,17 +255,6 @@ const buisness: ISolution[] = [
     iconPath: mobile,
     description:
       "В современном мире мобильные устройства — это главный инструмент связи с пользователями. Мы создаем мобильные приложения для iOS и Android любой сложности. Предоставляем полный цикл разработки, от идеи до публикации на площадках. Уникальный дизайн и функциональность — всё для того, чтобы клиентам было удобно и приятно пользоваться вашими услугами!",
-    price: [
-      {
-        name: "Standart",
-        amount: 600,
-      },
-      {
-        name: "Premium",
-        amount: 1500,
-        isPrimary: true,
-      },
-    ],
   },
   {
     type: "buisness",
@@ -346,17 +264,6 @@ const buisness: ISolution[] = [
     iconPath: legal,
     description:
       "Хотите быть уверены в защите своих прав в сети и за ее пределами? Мы предлагаем юридические услуги различной сложности как онлайн, так и офлайн. Поможем с любыми правовыми задачами — от подготовки документов, консультаций, защите в суде до решения сложных споров. Наши юристы, имеющие более 30 лет опыта, знают, как вас поддержать!",
-    price: [
-      {
-        name: "Standart",
-        amount: 600,
-      },
-      {
-        name: "Premium",
-        amount: 1500,
-        isPrimary: true,
-      },
-    ],
   },
   {
     type: "buisness",
@@ -364,17 +271,6 @@ const buisness: ISolution[] = [
     iconPath: ai,
     description:
       "ИИ — это не просто модный тренд, а необходимость в современном бизнесе. Мы внедряем искусственный интеллект, чтобы сделать ваши продукты более интерактивными и умными. С помощью ИИ можно автоматизировать множество задач — от ответов на часто задаваемые вопросы до персонализации пользовательского опыта.",
-    price: [
-      {
-        name: "Standart",
-        amount: 600,
-      },
-      {
-        name: "Premium",
-        amount: 1500,
-        isPrimary: true,
-      },
-    ],
   },
   {
     type: "buisness",
@@ -382,17 +278,6 @@ const buisness: ISolution[] = [
     iconPath: individual,
     description:
       "Не нашли нужной услуги? Не проблема. Мы понимаем, что каждый проект уникален и требует особого подхода. Наша команда готова выслушать ваши идеи и предложить решения, которые подойдут именно вам. Подберем профессиональных исполнителей, проконтролируем сроки и качество выполнения задач. Мы будем с вами на каждом этапе, доводя проект до идеала.",
-    price: [
-      {
-        name: "Standart",
-        amount: 600,
-      },
-      {
-        name: "Premium",
-        amount: 1500,
-        isPrimary: true,
-      },
-    ],
   },
 ];
 
@@ -433,7 +318,7 @@ const youtube: ISolution[] = [
       {
         amount: 5000,
         isFrom: true,
-        isDepends: true,
+        desc: "Цена зависит от объема работы",
       },
     ],
   },
@@ -465,7 +350,7 @@ const youtube: ISolution[] = [
       {
         amount: 9000,
         isFrom: true,
-        isDepends: true,
+        desc: "Цена зависит от объёма работы и дизайна",
       },
     ],
   },
@@ -497,7 +382,10 @@ const youtube: ISolution[] = [
       {
         amount: 25000,
         isFrom: true,
-        isDepends: true,
+        desc: `<ul>
+          <li>Если у вас уже имеется свой YouTube-канал – переплаты за опции Starter Pack не будет!</li>
+          <li>Цена зависит от вашей ниши, конкурентов и сложности разработки контент-стратегии</li>
+        </ul>`,
       },
     ],
   },
@@ -529,7 +417,7 @@ const youtube: ISolution[] = [
       {
         amount: 20000,
         isFrom: true,
-        isDepends: true,
+        desc: "Цена зависит от количества роликов и Shorts в месяц, а также от их хронометража",
       },
     ],
   },
@@ -561,7 +449,7 @@ const youtube: ISolution[] = [
       {
         amount: 70000,
         isFrom: true,
-        isDepends: true,
+        desc: "Цена зависит от вашей ниши, количества видео и Shorts в месяц, а также объема монтажа",
       },
     ],
   },
@@ -581,7 +469,7 @@ const youtube: ISolution[] = [
       {
         amount: 100000,
         isFrom: true,
-        isDepends: true,
+        desc: "Цена зависит от вашей ниши, объема работ над конент-планом, количества видео и Shorts в месяц, объема монтажа и дизайна",
       },
     ],
   },
@@ -613,7 +501,10 @@ const youtube: ISolution[] = [
       {
         amount: 20000,
         isFrom: true,
-        isDepends: true,
+        desc: `<ul>
+          <li>Цена зависит от объёма работы и количества Shorts в месяц</li>
+          <li>Если вам не нужная нарезка Short и добавление субтитров – переплаты за них не будет!</li>
+        </ul>`,
       },
     ],
   },
@@ -645,7 +536,7 @@ const youtube: ISolution[] = [
       {
         amount: 60000,
         isFrom: true,
-        isDepends: true,
+        desc: "Цена зависит от вашей ниши, объема работ над контент-планом, количества Shorts в месяц, сложности монтажа",
       },
     ],
   },

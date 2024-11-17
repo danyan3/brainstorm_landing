@@ -3,6 +3,7 @@ import telegramModal from "@assets/images/telegram-modal.svg";
 import qrCode from "@assets/images/qr-code.svg";
 import "@styles/lets-start-modal.css";
 import { ComponentProps } from "react";
+import { TELEGRAM_LINK } from "@/utils/consts";
 
 export const LetsStartModal = ({ children }: ComponentProps<"div">) => (
   <Dialog.Root>
@@ -32,7 +33,17 @@ export const LetsStartModal = ({ children }: ComponentProps<"div">) => (
             </li>
             <li>
               Также бота можно найти через поиск в Telegram по названию:
-              @brainstorm_bot{" "}
+              <a
+                style={{
+                  textDecoration: "none",
+                  color: "#bc3def",
+                  paddingLeft: "2px",
+                }}
+                href={TELEGRAM_LINK}
+                target="_blanck"
+              >
+                @brainstorm_bot
+              </a>
             </li>
             <li>
               <div>
@@ -40,7 +51,14 @@ export const LetsStartModal = ({ children }: ComponentProps<"div">) => (
                 избежании столкновения с фейками и мошенниками.
                 <div>
                   <Dialog.Trigger asChild>
-                    <button className="button">Поехали!</button>
+                    <a
+                      href={TELEGRAM_LINK}
+                      style={{ width: "fit-content" }}
+                      target="_blanck"
+                      className="button"
+                    >
+                      Поехали!
+                    </a>
                   </Dialog.Trigger>
                 </div>
               </div>

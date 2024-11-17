@@ -124,11 +124,20 @@ const WhomBlock: React.FC = () => {
                 </div>
               </div>
             </section>
-            <img
-              src={brilliant_youtube_button}
-              alt="Brilliant YouTube Button"
-              className="brilliant-youtube-button"
-            />
+            <motion.div className="brilliant-youtube-button">
+              <motion.img
+                initial={{ y: 0, x: 0 }}
+                viewport={{ once: true }}
+                whileInView={{ y: [0, 20, 0], x: [0, 3, 0, -3, 0] }}
+                transition={{
+                  duration: 7,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                src={brilliant_youtube_button}
+                alt="Brilliant YouTube Button"
+              />
+            </motion.div>
 
             <div className="star-1" />
           </div>{" "}

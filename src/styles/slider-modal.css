@@ -40,7 +40,7 @@
   width: 100vw;
   max-height: 60svh;
   height: 100%;
-  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  animation: contentShow 650ms cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 10000;
 }
 .slider__content:focus {
@@ -53,9 +53,22 @@
 }
 
 .slider__container .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.slider__container .swiper-slide div {
   text-align: center;
   font-size: 18px;
   background: #fff;
+
+  border-radius: 32px;
+  background-color: #787678;
+  max-height: 37svh;
+  margin: auto 0;
+  transition: 0.5s;
+  transition-property: background-color, max-height;
+  aspect-ratio: 16/ 9;
 
   /* Center slide text vertically */
   display: flex;
@@ -64,16 +77,7 @@
   overflow: hidden;
 }
 
-.slider__container .swiper-slide {
-  border-radius: 32px;
-  background-color: #787678;
-  max-height: 37svh;
-  margin: auto 0;
-  transition: 0.5s;
-  transition-property: background-color, max-height;
-}
-
-.slider__container .swiper-slide-active {
+.slider__container .swiper-slide-active div {
   background-color: #d9d9d9;
   max-height: 60svh;
 }
@@ -94,9 +98,34 @@
 }
 
 .slider__container .swiper-slide img {
-  width: 100%;
+  width: fit-content;
   height: 100%;
+  width: 100%;
   object-fit: contain;
+}
+
+.slider__video-container {
+  position: relative;
+}
+
+.slider__video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  z-index: 1;
+  width: 54px;
+  height: 54px;
+  transition: all 0.3s;
+}
+
+.slider__video-play:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.slider__video-play:active {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 @keyframes overlayShow {
@@ -120,14 +149,14 @@
 }
 
 @media only screen and (max-width: 640px) {
-  .slider__container .swiper-slide {
-    max-height: 160px;
+  .slider__container .swiper-slide div {
+    transform: scaleY(0.8);
   }
-  .slider__container .swiper-slide-active {
-    max-height: 240px;
+  .slider__container .swiper-slide-active div {
+    transform: scale(1);
   }
 
-  .slider__content {
-    max-height: 240px;
+  .slider__container .swiper-slide div {
+    aspect-ratio: 16/ 12;
   }
 }

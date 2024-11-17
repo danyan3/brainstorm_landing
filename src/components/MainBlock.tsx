@@ -38,7 +38,7 @@ const MainBlock: React.FC = () => {
       <i className="main-block__spark-2" />
       <i className="main-block__spark-3" />
       <i className="main-block__spark-4" />
-      <div className="main-block-bg" />
+
       <motion.div className="main-block">
         <hgroup className="title-group">
           <h2 className="title-group__pretitle">
@@ -62,21 +62,32 @@ const MainBlock: React.FC = () => {
         </LetsStartModal>
 
         <div className="star-4" />
-        <motion.img
-          viewport={{ once: true }}
-          initial={{
-            opacity: 0,
-            clipPath: "polygon(0 0, 0% 0, 0% 100%, 0% 100%)",
-          }}
-          whileInView={{
-            opacity: 1,
-            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-          }}
-          transition={{ duration: 2 }}
-          src={silver_youtube_button}
-          alt="Silver YouTube button"
+        <motion.div
           className="silver-youtube-button-sm"
-        />
+          initial={{ y: 0, x: 0 }}
+          viewport={{ once: true }}
+          whileInView={{ y: [0, 10, 0], x: [0, 3, 0, -3, 0] }}
+          transition={{
+            duration: 9,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <motion.img
+            viewport={{ once: true }}
+            initial={{
+              opacity: 0,
+              clipPath: "polygon(0 0, 0% 0, 0% 100%, 0% 100%)",
+            }}
+            whileInView={{
+              opacity: 1,
+              clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+            }}
+            transition={{ duration: 2 }}
+            src={silver_youtube_button}
+            alt="Silver YouTube button"
+          />
+        </motion.div>
       </motion.div>
       <div className="main-visual">
         <div className="rocket-container">
@@ -140,22 +151,32 @@ const MainBlock: React.FC = () => {
               />
             </motion.div>
           </div>
-
-          <motion.img
-            viewport={{ once: true }}
-            initial={{
-              opacity: 0,
-              clipPath: "polygon(0 0, 0% 0, 0% 100%, 0% 100%)",
-            }}
-            whileInView={{
-              opacity: 1,
-              clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-            }}
-            transition={{ duration: 2 }}
-            src={silver_youtube_button}
-            alt="Silver YouTube button"
+          <motion.div
             className="silver-youtube-button"
-          />
+            initial={{ y: 0, x: 0 }}
+            viewport={{ once: true }}
+            whileInView={{ y: [0, 10, 0], x: [0, 3, 0, -3, 0] }}
+            transition={{
+              duration: 9,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <motion.img
+              viewport={{ once: true }}
+              initial={{
+                opacity: 0,
+                clipPath: "polygon(0 0, 0% 0, 0% 100%, 0% 100%)",
+              }}
+              whileInView={{
+                opacity: 1,
+                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+              }}
+              transition={{ duration: 2 }}
+              src={silver_youtube_button}
+              alt="Silver YouTube button"
+            />
+          </motion.div>
         </div>
         <motion.img
           viewport={{ once: true }}
