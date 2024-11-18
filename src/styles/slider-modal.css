@@ -68,7 +68,6 @@
   margin: auto 0;
   transition: 0.5s;
   transition-property: background-color, max-height;
-  aspect-ratio: 16/ 9;
 
   /* Center slide text vertically */
   display: flex;
@@ -81,7 +80,7 @@
   border-radius: 0;
 }
 
-.slider__trigger .swiper-slide div button {
+.slider__trigger {
   pointer-events: none;
 }
 
@@ -114,6 +113,7 @@
 
 .slider__video-container {
   position: relative;
+  width: 100%;
 }
 
 .slider__video-play {

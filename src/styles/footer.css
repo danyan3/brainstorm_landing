@@ -6,13 +6,12 @@ footer {
 .footer-spark {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
   bottom: 0;
   width: 866px;
   height: 154px;
   background-color: #4148e9;
   filter: blur(250px);
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0) translateX(-50%);
   z-index: -1;
 }
 

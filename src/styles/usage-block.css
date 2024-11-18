@@ -55,7 +55,7 @@
 }
 
 .parallax-container {
-  height: 4000px;
+  height: 3000px;
   position: relative;
 }
 
@@ -187,12 +187,15 @@
 
 .usage-block__gif {
   width: 100%;
+
   border-radius: 30px;
   background-color: #201e23;
 }
 
 .usage-block__gif .gif {
   width: 100%;
+  object-fit: cover;
+  height: 372px;
   border-radius: 30px;
 }
 
@@ -275,6 +278,12 @@
 
   .usage-block__step.usage-block__step_selected {
     display: flex;
+  }
+
+  .usage-block__gif .gif {
+    width: 100%;
+    height: 220px;
+    border-radius: 30px;
   }
 }
 

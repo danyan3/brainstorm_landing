@@ -33,7 +33,7 @@ const Video = ({ src }: { src: string }) => {
   }, [ref.current?.played]);
 
   return (
-    <div className="slider__video-container">
+    <section className="slider__video-container">
       {!isPlay && (
         <button
           onClick={() => setIsPlay((prev) => !prev)}
@@ -88,7 +88,7 @@ const Video = ({ src }: { src: string }) => {
         controls={isPlay}
         src={src}
       />
-    </div>
+    </section>
   );
 };
 

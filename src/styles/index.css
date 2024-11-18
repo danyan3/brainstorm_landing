@@ -144,6 +144,11 @@ body[data-scroll-locked][data-scroll-locked] {
   background-size: cover;
 }
 
+html body[data-scroll-locked] {
+  --removed-body-scroll-bar-size: 0px;
+  margin-right: 0 !important;
+}
+
 @media only screen and (max-width: 1024px) {
   main {
     padding-top: 100px;

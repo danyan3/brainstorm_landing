@@ -2,17 +2,41 @@
   display: flex;
   align-self: baseline;
   flex-direction: column;
+  position: relative;
   width: 50%;
   padding: 20px;
   gap: 20px;
   border-radius: 30px;
-  background: linear-gradient(
-    317deg,
-    rgba(32, 30, 38, 0.2) 5.89%,
-    #201d26 100%
-  );
+  background: linear-gradient(317deg, #201d26 0%, #17151b 100%);
 
   color: #ffffff;
+}
+
+.service-info::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  border-radius: 30px;
+  right: -1px;
+  top: -1px;
+  bottom: 1px;
+  z-index: -1;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    transparent 50%
+  );
+  opacity: 0;
+  animation: service-info-after 0.3s 0.3s forwards;
+}
+
+@keyframes service-info-after {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
 }
 
 .service-info__header {
@@ -61,6 +85,10 @@
   gap: 20px;
 }
 
+.service-info__container-column {
+  flex-direction: column;
+}
+
 .service-info__price {
   display: flex;
   flex-direction: column;
@@ -95,5 +123,9 @@
 @media only screen and (max-width: 1024px) {
   .service-info__main {
     gap: 20px;
+  }
+
+  .service-info::after {
+    display: none;
   }
 }

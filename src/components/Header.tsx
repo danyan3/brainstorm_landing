@@ -6,6 +6,7 @@ import { MenuIcon } from "@/components/ui/icons/MenuIcon";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { LetsStartModal } from "./LetsStartModal";
+import { TELEGRAM_LINK } from "@/utils/consts";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -77,9 +78,13 @@ const Header: React.FC = () => {
         </ul>
       </nav>
       <div className="btn-group">
-        <button className="btn-group__button btn-group__button_tg">
+        <a
+          href={TELEGRAM_LINK}
+          target="_blanck"
+          className="btn-group__button btn-group__button_tg"
+        >
           <img src={telegram_logo} alt="Telegram logo" />
-        </button>
+        </a>
         <LetsStartModal>
           <button className="button btn-group__button_start">НАЧАТЬ</button>
         </LetsStartModal>

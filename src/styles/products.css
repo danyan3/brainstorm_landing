@@ -24,6 +24,12 @@
   gap: 20px;
 }
 
+.products-group-container {
+  display: grid;
+  gap: 40px;
+  width: 100%;
+}
+
 .products__button {
   position: relative;
   text-align: left;

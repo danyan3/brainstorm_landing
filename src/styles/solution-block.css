@@ -46,11 +46,24 @@
 }
 
 .solution-block .switch {
+  background: linear-gradient(90deg, rgba(32, 29, 38, 1), #171519);
+  position: relative;
+}
+
+.solution-block .switch::after {
+  position: absolute;
+  content: "";
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  top: -1px;
+  z-index: -1;
   background: linear-gradient(
-    90deg,
-    rgba(32, 29, 38, 1),
-    rgba(32, 29, 38, 0.2)
+    -90deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 75%
   );
+  border-radius: 87px;
 }
 
 .solution-select {

@@ -1,6 +1,6 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import telegramModal from "@assets/images/telegram-modal.svg";
-import qrCode from "@assets/images/qr-code.svg";
+import qrCode from "@assets/images/qrcode.webp";
 import "@styles/lets-start-modal.css";
 import { ComponentProps } from "react";
 import { TELEGRAM_LINK } from "@/utils/consts";
@@ -55,7 +55,7 @@ export const LetsStartModal = ({ children }: ComponentProps<"div">) => (
                       href={TELEGRAM_LINK}
                       style={{ width: "fit-content" }}
                       target="_blanck"
-                      className="button"
+                      className="button modal-button"
                     >
                       Поехали!
                     </a>

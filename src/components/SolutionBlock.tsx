@@ -27,14 +27,12 @@ const SolutionBlock: React.FC = () => {
   useEffect(() => {
     if (currentType) {
       handleSwitchActiveSolution(
-        SOLUTIONS.find((solution) => solution.type === currentType)
+        SOLUTIONS[currentType][0].solutions.find(
+          (solution) => solution.type === currentType
+        )
       );
     }
   }, [currentType]);
-
-  const filtredSolutions = SOLUTIONS.filter(
-    (solution) => solution.type === currentType
-  );
 
   return (
     <Element id="services" name="services">
@@ -70,7 +68,7 @@ const SolutionBlock: React.FC = () => {
             <div className="solution-select">
               <SolutionsSelect
                 currentSolution={activeSolution}
-                solutions={filtredSolutions}
+                solutions={SOLUTIONS[currentType].flatMap((el) => el.solutions)}
                 onChange={handleSwitchActiveSolution}
               />
             </div>
@@ -110,7 +108,13 @@ const SolutionBlock: React.FC = () => {
                         __html: activeSolution.description,
                       }}
                     />
-                    <div className="service-info__container">
+                    <div
+                      className={`service-info__container ${
+                        !activeSolution.price
+                          ? "service-info__container-column"
+                          : ""
+                      }`}
+                    >
                       {activeSolution.gallery && (
                         <div className="service-info__slider">
                           <div className="price__title-container">
@@ -128,7 +132,14 @@ const SolutionBlock: React.FC = () => {
                             <h4 className="price__title">Цена</h4>
                             <div className="break" />
                           </div>
-                          <div className="price__content-container">
+                          <div
+                            style={{
+                              flexDirection: !activeSolution.gallery
+                                ? "row"
+                                : "column",
+                            }}
+                            className="price__content-container"
+                          >
                             <div className="price__content">
                               <ul className="price__list">
                                 {activeSolution.price.map(
@@ -214,16 +225,20 @@ const SolutionBlock: React.FC = () => {
                 key={currentType}
                 className="products"
               >
-                <div className="products-group">
-                  {filtredSolutions.map((solution) => (
-                    <ProductButton
-                      key={solution.title}
-                      icon={solution.iconPath}
-                      isSelected={solution.title === activeSolution?.title}
-                      onClick={() => setActiveSolution(solution)}
-                    >
-                      {solution.title}
-                    </ProductButton>
+                <div className="products-group-container">
+                  {SOLUTIONS[currentType].flatMap((block) => (
+                    <div className="products-group">
+                      {block.solutions.map((solution) => (
+                        <ProductButton
+                          key={solution.title}
+                          icon={solution.iconPath}
+                          isSelected={solution.title === activeSolution?.title}
+                          onClick={() => setActiveSolution(solution)}
+                        >
+                          {solution.title}
+                        </ProductButton>
+                      ))}
+                    </div>
                   ))}
                 </div>
               </motion.div>{" "}
