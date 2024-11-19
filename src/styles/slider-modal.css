@@ -11,6 +11,7 @@
 
 .slider__trigger .swiper-fade .swiper-slide {
   border-radius: 0;
+  width: 330px;
 }
 
 .slider__trigger .slider__container .swiper-slide img {
@@ -155,6 +156,10 @@
 }
 
 @media only screen and (max-width: 640px) {
+  .slider__trigger .swiper-fade .swiper-slide {
+    border-radius: 0;
+    width: auto;
+  }
   .slider__container .swiper-slide div {
     transform: scaleY(0.8);
   }
