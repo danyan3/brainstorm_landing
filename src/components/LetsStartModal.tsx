@@ -6,14 +6,16 @@ import { ComponentProps } from "react";
 import { TELEGRAM_LINK } from "@/utils/consts";
 
 export const LetsStartModal = ({ children }: ComponentProps<"div">) => (
-  <Dialog.Root>
+  <Dialog.Root modal>
+    <img src={telegramModal} style={{ display: "none" }} />
+    <img src={qrCode} style={{ display: "none" }} />
     <Dialog.Trigger asChild>{children}</Dialog.Trigger>
     <Dialog.Portal>
       <div className="lets-start-slider">
         <Dialog.Overlay className="lets-start-slider__overlay" />
         <Dialog.Content className="lets-start-slider__content">
-          <div className="lets-start-slider__spark-1" />
           <div className="lets-start-slider__spark-2" />
+          <div className="lets-start-slider__spark-1" />
           <Dialog.Title className="title">
             Дальнейшие
             <br /> действия <img src={telegramModal} alt="Telegram icon" />

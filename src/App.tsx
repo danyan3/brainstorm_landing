@@ -8,7 +8,6 @@ import UsageBlock from "@components/UsageBlock";
 import Footer from "@components/Footer";
 import { ParallaxBannerLayer, ParallaxProvider } from "react-scroll-parallax";
 import preview from "@assets/images/bg1.png";
-
 const App: React.FC = () => {
   const [isRendered, setIsRendered] = useState(false);
 

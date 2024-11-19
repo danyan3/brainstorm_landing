@@ -61,7 +61,8 @@
   background: linear-gradient(
     -90deg,
     rgba(255, 255, 255, 0.2) 0%,
-    transparent 75%
+    #201d26 4%,
+    #201e2600
   );
   border-radius: 87px;
 }
@@ -406,6 +407,10 @@
 @media only screen and (max-width: 1024px) {
   .solution-block {
     margin-top: 80px;
+  }
+
+  .service-info__animation-container {
+    width: 100%;
   }
 
   .solution-block__content_services {

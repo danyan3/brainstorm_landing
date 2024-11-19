@@ -8,8 +8,12 @@
   gap: 20px;
   border-radius: 30px;
   background: linear-gradient(317deg, #201d26 0%, #17151b 100%);
-
+  width: 100%;
   color: #ffffff;
+}
+
+.service-info__animation-container {
+  width: 50%;
 }
 
 .service-info::after {
@@ -26,17 +30,6 @@
     rgba(255, 255, 255, 0.5) 0%,
     transparent 50%
   );
-  opacity: 0;
-  animation: service-info-after 0.3s 0.3s forwards;
-}
-
-@keyframes service-info-after {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100;
-  }
 }
 
 .service-info__header {

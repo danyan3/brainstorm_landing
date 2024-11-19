@@ -315,7 +315,7 @@
   }
 
   .whom-item-1 {
-    transform: translateY(220px);
+    transform: translateY(230px);
   }
 
   .whom-item-1 .graph-point {
@@ -323,7 +323,7 @@
   }
 
   .whom-item-2 {
-    transform: translateY(180px);
+    transform: translateY(190px);
   }
 
   .whom-item-2 .graph-point {
@@ -331,7 +331,7 @@
   }
 
   .whom-item-3 {
-    transform: translateY(130px);
+    transform: translateY(140px);
   }
 
   .whom-item-3 .graph-point {

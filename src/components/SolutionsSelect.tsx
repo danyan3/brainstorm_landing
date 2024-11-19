@@ -51,6 +51,8 @@ export const SolutionsSelect = ({
                       currentSolution.title === solution.title
                         ? "brightness(1000%) contrast(100%)"
                         : "",
+                    width: 40,
+                    height: 40,
                   }}
                   src={solution.iconPath}
                 />
