@@ -123,8 +123,6 @@
   transform: translate(-50%, -50%);
   background-color: transparent;
   z-index: 1;
-  width: 54px;
-  height: 54px;
   transition: all 0.3s;
 }
 
