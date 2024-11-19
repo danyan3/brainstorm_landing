@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "@styles/footer.css";
 import telegram_logo from "@assets/images/telegram.svg";
 import rocket from "@assets/images/rocket.png";
 import vector from "@assets/images/vector-2.svg";
 import ImportantBlock from "./ImportantBlock";
-import { motion } from "framer-motion";
+import { animate, inView, motion } from "framer-motion";
 
 const Footer: React.FC = () => {
+  useEffect(() => {
+    [".footer__contacts,.footer__rights"].map((item, i) => {
+      inView(item, ({ target }) => {
+        animate(
+          target,
+          {
+            opacity: [0, 1],
+            y: [50, 0],
+          },
+          {
+            duration: 1,
+            delay: i / 2,
+          }
+        );
+      });
+    }, []);
+  });
   return (
     <footer>
       <ImportantBlock />

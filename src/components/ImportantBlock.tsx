@@ -9,8 +9,7 @@ const ImportantBlock: React.FC = () => {
     [
       ".important-block__title",
       ".important-block__list-item",
-      ".important-block__footer",
-      ".footer__contacts,.footer__rights",
+      ".important-block__footer"
     ].map((item, i) => {
       inView(item, ({ target }) => {
         animate(

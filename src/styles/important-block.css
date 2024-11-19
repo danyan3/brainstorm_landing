@@ -61,6 +61,7 @@
 
 .important-block__list-item {
   text-align: center;
+  opacity: 0;
 }
 
 .important-block__list-item span {
@@ -83,6 +84,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  opacity: 0;
 }
 
 .important-block__text {
