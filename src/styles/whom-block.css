@@ -128,23 +128,23 @@
 }
 
 .whom-item-1 {
-  transform: translateY(170px);
+  transform: translateY(180px);
 }
 
 .whom-item-2 {
-  transform: translateY(85px);
+  transform: translateY(95px);
 }
 
 .whom-item-3 {
-  transform: translateY(55px);
+  transform: translateY(65px);
 }
 
 .whom-item-4 {
-  transform: translateY(-30px);
+  transform: translateY(-20px);
 }
 
 .whom-item-5 {
-  transform: translateY(-125px);
+  transform: translateY(-115px);
 }
 
 .graph-point {

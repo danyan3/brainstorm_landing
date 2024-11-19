@@ -86,7 +86,7 @@ const Video = ({ src }: { src: string }) => {
         }}
         preload="metadata"
         controls={isPlay}
-        src={src}
+        src={`${src}#t=0.001`}
       />
     </section>
   );
