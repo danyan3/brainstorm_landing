@@ -46,7 +46,7 @@ const Header: React.FC = () => {
               offset={window.innerWidth < 640 ? 0 : -150}
               duration={500}
             >
-              Кому подходит<span className="nav-list__item-lg">?</span>
+              Кому подходит<span className="nav-list__item-lg"></span>
             </Link>
           </li>
           <li className="nav-list__item">
@@ -72,7 +72,7 @@ const Header: React.FC = () => {
               offset={window.innerWidth < 640 ? 50 : -150}
               duration={500}
             >
-              Как пользоваться<span className="nav-list__item-lg">?</span>
+              Как пользоваться<span className="nav-list__item-lg"></span>
             </Link>
           </li>
         </ul>

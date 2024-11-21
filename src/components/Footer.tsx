@@ -5,6 +5,7 @@ import rocket from "@assets/images/rocket.png";
 import vector from "@assets/images/vector-2.svg";
 import ImportantBlock from "./ImportantBlock";
 import { animate, inView, motion } from "framer-motion";
+import { TELEGRAM_LINK } from "@/utils/consts";
 
 const Footer: React.FC = () => {
   useEffect(() => {
@@ -35,11 +36,18 @@ const Footer: React.FC = () => {
               href="mailto:brainstorm_prod@gmail.com"
               className="contact_email"
             >
-              brainstorm_prod@gmail.com
+              info@brainstormprod.ru
             </a>
-            <button className="contact__button_tg">
+            {/* <button className="contact__button_tg">
               <img src={telegram_logo} alt="Telegram logo" />
-            </button>
+            </button> */}
+            <a
+              href={TELEGRAM_LINK}
+              target="_blanck"
+              className="btn-group__button btn-group__button_tg"
+            >
+            <img src={telegram_logo} alt="Telegram logo" />
+            </a>
           </div>
         </div>
 

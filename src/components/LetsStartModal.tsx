@@ -44,7 +44,7 @@ export const LetsStartModal = ({ children }: ComponentProps<"div">) => (
                 href={TELEGRAM_LINK}
                 target="_blanck"
               >
-                @brainstorm_bot
+                @brainstormoff_bot
               </a>
             </li>
             <li>

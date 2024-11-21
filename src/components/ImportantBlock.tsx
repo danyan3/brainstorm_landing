@@ -37,17 +37,17 @@ const ImportantBlock: React.FC = () => {
           <ul className="important-block__list">
             <li className="important-block__list-item">
               <span>
-                Не занимаемся подбором сотрудников для оффлайн-съемок и
-                съемочного процесса
+                Не занимаемся подбором сотрудников для офлайн-съёмок и
+                съёмочного процесса
               </span>
             </li>
             <li className="important-block__list-item">
               <span>
-                Не используем накрутку или другие "серые" методы продвижения
+                Не используем накрутку или другие «серые» методы продвижения
               </span>
             </li>
             <li className="important-block__list-item">
-              <span>Не продюсируем съемки</span>
+              <span>Не продюсируем съёмки</span>
             </li>
           </ul>
           <div className="important-block__footer">
