@@ -129,11 +129,11 @@
   transition: all 0.3s;
 }
 
-.slider__video-play:hover {
+.slider__video-play:hover { 
   transform: translate(-50%, -50%) scale(1.1);
 }
 
-.slider__video-play:active {
+.slider__video-play:active { 
   transform: translate(-50%, -50%) scale(1);
 }
 

@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/swiper-bundle.css";
 
-const Video = ({ src }: { src: string }) => {
+const Video = ({ src, from, setOpen }: { src: string, from?: string, setOpen: React.Dispatch<React.SetStateAction<boolean>> }) => {
   const [isPlay, setIsPlay] = useState(false);
   const ref = useRef<HTMLVideoElement>(null);
 
@@ -36,7 +36,13 @@ const Video = ({ src }: { src: string }) => {
     <section className="slider__video-container">
       {!isPlay && (
         <button
-          onClick={() => setIsPlay((prev) => !prev)}
+          onClick={() => {
+            if (from === 'trigger') {
+              setOpen(true);
+              return;
+            }
+            setIsPlay((prev) => !prev);
+          }}
           className="slider__video-play"
         >
           <svg
@@ -93,8 +99,10 @@ const Video = ({ src }: { src: string }) => {
 };
 
 export const SliderModal = ({ slides }: { slides: IGalleryItem[] }) => {
+  const [open, setOpen] = useState(false);
+
   return (
-    <Dialog.Root>
+    <Dialog.Root open={open} onOpenChange={setOpen}>
       <Dialog.Trigger className="slider__trigger">
         <Swiper
           slidesPerView={1}
@@ -109,7 +117,7 @@ export const SliderModal = ({ slides }: { slides: IGalleryItem[] }) => {
           {slides.map((slide) => (
             <SwiperSlide key={slide.src}>
               {slide.type === "image" && <img alt="Image" src={slide.src} />}
-              {slide.type === "video" && <Video src={slide.src} />}
+              {slide.type === "video" && <Video from="trigger" setOpen={setOpen} src={slide.src} />}
             </SwiperSlide>
           ))}
         </Swiper>
@@ -144,7 +152,7 @@ export const SliderModal = ({ slides }: { slides: IGalleryItem[] }) => {
               <SwiperSlide key={slide.src}>
                 <div>
                   {slide.type === "image" && <img src={slide.src} />}
-                  {slide.type === "video" && <Video src={slide.src} />}
+                  {slide.type === "video" && <Video setOpen={setOpen} src={slide.src} />}
                 </div>
               </SwiperSlide>
             ))}
